@@ -105,9 +105,6 @@ function displayQuestion(id) {
     ? (prevButton.style.display = "block")
     : (prevButton.style.display = "none");
 
-  //   questionId == 3
-  //     ? (resButton.style.display = "block")
-  //     : (resButton.style.display = "none");
   if (questionId == 3) {
     resButton.style.display = "block";
     nextButton.style.display = "none";
