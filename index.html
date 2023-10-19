@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="quiz">
+      <h1>Онлайн-подбор средств для лица</h1>
+      <p>
+        Пройдите короткий тест и получите список наиболее подходящих для вас
+        косметических продуктов
+      </p>
+      <div class="quiz__box">
+        <div class="dot-indicators">
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+        <h4 class="question__number"></h4>
+        <div class="quiz__body"></div>
+        <div class="quiz__buttons">
+          <button class="btn__prev">Назад</button>
+          <button class="btn__next">Дальше</button>
+          <button class="btn__result">Узнать результат</button>
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <h1>Результат</h1>
+      <p>Мы подобрали для вас наиболее подходящие средства</p>
+      <div class="result__products"></div>
+      <h4 class="result__pages">1 2 3 ... 13</h4>
+    </div>
+    <script src="./app.js" />
+  </body>
+</html>
