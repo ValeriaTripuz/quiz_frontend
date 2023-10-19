@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter";
 }
 h1 {
   position: relative;
@@ -133,10 +136,12 @@ button:focus,
 .btn-prev,
 .btn-result {
   display: none;
+  cursor: pointer;
 }
 
 .btn-next {
   display: block;
+  cursor: pointer;
 }
 
 .result__products {
@@ -170,6 +175,7 @@ button:focus,
   width: 240px;
   height: 324px;
   margin-bottom: 80px;
+  cursor: pointer;
 }
 
 .result__item__img {
@@ -186,6 +192,13 @@ button:focus,
   top: 5%;
   width: 27px;
   height: 24px;
+}
+
+.result__item__img_heart:hover {
+  cursor: pointer;
+  filter: invert(90%);
+  width: 29px;
+  height: 26px;
 }
 
 .result__item__name {
@@ -212,7 +225,7 @@ button:focus,
   height: 20px;
 }
 
-.discont-price {
+.discount-price {
   font-size: 20px;
   display: block;
   font-weight: 600;

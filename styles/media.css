@@ -45,10 +45,10 @@
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 23px;
+    font-size: 30px;
   }
   p {
-    font-size: 16px;
+    font-size: 20px;
     max-width: 360px;
   }
 
@@ -62,5 +62,17 @@
 
   .result__item {
     width: 390px;
+  }
+  .price {
+    position: relative;
+    left: -5px;
+  }
+
+  .discunt-price {
+    margin-right: 20px;
+  }
+
+  .result__item__name {
+    width: fit-content;
   }
 }
