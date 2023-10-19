@@ -42,6 +42,9 @@ async function getProducts() {
     })
     .then((data) => {
       addProductsToPage(data);
+    })
+    .catch((error) => {
+      console.error(error.message);
     });
 }
 
