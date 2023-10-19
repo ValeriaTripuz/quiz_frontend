@@ -45,15 +45,21 @@
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 30px;
+    font-size: 25px;
+    max-width: 320px;
   }
   p {
     font-size: 20px;
-    max-width: 360px;
+    max-width: 350px;
+  }
+
+  li {
+    font-size: 13px;
   }
 
   .quiz__box {
-    height: 375px;
+    height: 380px;
+    margin-bottom: 150px;
   }
 
   .result__item__img {
