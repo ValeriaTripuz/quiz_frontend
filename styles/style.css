@@ -5,14 +5,16 @@ body {
 }
 h1 {
   position: relative;
+  width: fit-content;
   top: 50px;
   left: 50px;
-  size: 40px;
+  font-size: 40px;
   font-weight: 700;
 }
 
 h2 {
   position: relative;
+  width: fit-content;
   left: 4%;
   font-weight: 700;
   font-size: 20px;
@@ -21,6 +23,7 @@ h2 {
 
 h4 {
   position: relative;
+  width: fit-content;
   font-size: 15px;
   left: 4%;
   top: 6%;
@@ -34,6 +37,7 @@ p {
   left: 50px;
   font-weight: 400;
   font-size: 20px;
+  width: fit-content;
   max-width: 583px;
   line-height: 24.2px;
 }
@@ -42,15 +46,29 @@ span {
   font-size: 20px;
 }
 
+img {
+  height: 100%;
+}
+
+ul {
+  padding-left: 3.5%;
+}
+
+li {
+  list-style: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
 .quiz {
   position: relative;
   display: block;
-  width: 100%;
   height: fit-content;
 }
 
 .result {
   display: none;
+  width: 100%;
   margin-bottom: 100px;
 }
 
@@ -83,6 +101,7 @@ span {
 
 .quiz__buttons {
   position: relative;
+  width: fit-content;
   display: flex;
   flex-direction: row;
   top: 20%;
@@ -106,27 +125,17 @@ button {
 }
 
 button:focus,
-.btn__result {
+.btn-result {
   color: white;
   background-color: #00a5ff;
 }
 
-ul {
-  padding-left: 3.5%;
-}
-
-li {
-  list-style: none;
-  font-size: 15px;
-  font-weight: 400;
-}
-
-.btn__prev,
-.btn__result {
+.btn-prev,
+.btn-result {
   display: none;
 }
 
-.btn__next {
+.btn-next {
   display: block;
 }
 
@@ -144,6 +153,7 @@ li {
 
 .result__pages {
   position: relative;
+  width: fit-content;
   left: 3%;
   top: 70px;
   height: fit-content;
@@ -162,7 +172,7 @@ li {
   margin-bottom: 80px;
 }
 
-.item_img {
+.result__item__img {
   max-width: 240px;
   height: 240px;
   border-radius: 6.75px;
@@ -170,11 +180,7 @@ li {
   text-align: center;
 }
 
-img {
-  height: 100%;
-}
-
-.heart_img {
+.result__item__img_heart {
   position: absolute;
   left: 83%;
   top: 5%;
@@ -182,7 +188,7 @@ img {
   height: 24px;
 }
 
-.item_name {
+.result__item__name {
   width: 240px;
   height: 44px;
   font-weight: 500;
@@ -196,7 +202,7 @@ img {
   text-align: left;
 }
 
-.item_prices {
+.result__item__prices {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -206,7 +212,7 @@ img {
   height: 20px;
 }
 
-.discont_price {
+.discont-price {
   font-size: 20px;
   display: block;
   font-weight: 600;

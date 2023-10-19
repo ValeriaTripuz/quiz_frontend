@@ -1,0 +1,66 @@
+@media (min-width: 768px) and (max-width: 991px) {
+  .quiz__box {
+    width: 80%;
+    left: 0;
+    margin: 0 auto;
+  }
+  li {
+    width: fit-content;
+  }
+  .result__products {
+    justify-content: space-around;
+  }
+  h1,
+  p,
+  .result__pages {
+    left: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .quiz__box {
+    width: 85%;
+    left: 0;
+    margin: 0 auto;
+  }
+  li {
+    width: fit-content;
+  }
+  p {
+    max-width: 460px;
+  }
+  h1,
+  p,
+  .result__pages {
+    left: 7%;
+  }
+  .result__products {
+    justify-content: space-around;
+  }
+
+  .result__item__prices {
+    left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 23px;
+  }
+  p {
+    font-size: 16px;
+    max-width: 360px;
+  }
+
+  .quiz__box {
+    height: 375px;
+  }
+
+  .result__item__img {
+    max-width: 390px;
+  }
+
+  .result__item {
+    width: 390px;
+  }
+}

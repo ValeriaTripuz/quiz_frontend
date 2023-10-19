@@ -23,17 +23,19 @@ const questions = [
 ];
 
 let questionId = 1;
-const nextButton = document.querySelector(".btn__next");
+const nextButton = document.querySelector(".btn-next");
+const prevButton = document.querySelector(".btn-prev");
+const resButton = document.querySelector(".btn-result");
 const questionBody = document.querySelector(".quiz__body");
-let questionText = document.createElement("h2");
-let questionChoices = document.createElement("ul");
-const prevButton = document.querySelector(".btn__prev");
-const resButton = document.querySelector(".btn__result");
-const questionNumberText = document.querySelector(".question__number");
+const questionNumberText = document.querySelector(".question-number");
 const dotIndicator = document.querySelectorAll(".indicator");
-
 const resultBlock = document.querySelector(".result");
 const quizBlock = document.querySelector(".quiz");
+const productsBlock = document.querySelector(".result__products");
+const discontPrice = document.querySelector(".discont_price");
+
+let questionText = document.createElement("h2");
+let questionChoices = document.createElement("ul");
 
 async function getProducts() {
   await fetch("./files/products.json")
@@ -48,20 +50,17 @@ async function getProducts() {
     });
 }
 
-const productsBlock = document.querySelector(".result__products");
-const discontPrice = document.querySelector(".discont_price");
-
 function addProductsToPage(data) {
   data.forEach((item) => {
     productsBlock.innerHTML += `
       <div class="result__item">
-      <div class="item_img">
-      <img class='heart_img'src="./images/Vector.jpg" alt="" />
+      <div class="result__item__img">
+      <img class='result__item__img_heart'src="./images/Vector.jpg" alt="" />
       <img src="${item.image}" alt="" />
       </div>
-      <h3 class="item_name">${item.title}</h3>
-      <div class="item_prices">
-        <span class="discont_price">${
+      <h3 class="result__item__name">${item.title}</h3>
+      <div class="result__item__prices">
+        <span class="discont-price">${
           item.oldPrice == null ? "" : item.oldPrice
         }</span>
         <span class="price"> ${item.price} <span>руб.</span></span>
