@@ -21,7 +21,7 @@ function addProductsToPage(data) {
 
     hearts.forEach((heart) => {
       heart.addEventListener("click", () => {
-        heart.style.filter = "invert(90%)";
+        heart.classList.toggle("active-heart");
       });
     });
   });
