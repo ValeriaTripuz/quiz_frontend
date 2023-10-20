@@ -21,7 +21,11 @@ function addProductsToPage(data) {
 
     hearts.forEach((heart) => {
       heart.addEventListener("click", () => {
-        heart.classList.toggle("active-heart");
+        if (heart.classList.contains("active-heart")) {
+          heart.classList.remove("active-heart");
+        } else {
+          heart.classList.add("active-heart");
+        }
       });
     });
   });
