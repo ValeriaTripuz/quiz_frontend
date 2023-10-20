@@ -1,3 +1,15 @@
+@media (min-width: 992px) and (max-width: 1330px) {
+  .result__products {
+    justify-content: center;
+    grid-gap: 40px;
+  }
+  h1,
+  p,
+  .result__pages {
+    left: 7%;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .quiz__box {
     width: 80%;
@@ -13,7 +25,7 @@
   h1,
   p,
   .result__pages {
-    left: 10%;
+    left: 6%;
   }
 }
 
@@ -45,7 +57,7 @@
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 25px;
+    font-size: 30px;
     max-width: 320px;
   }
   p {

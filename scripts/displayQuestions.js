@@ -14,7 +14,6 @@ import {
 } from "./variables.js";
 
 let questionId = 1;
-// discountPrice.style.display = "none";
 
 displayQuestion(questionId);
 
@@ -45,11 +44,22 @@ function displayQuestion(id) {
       questionBody.appendChild(questionText);
       questionNumberText.innerHTML = `Вопрос ${questionsItem.id} из ${questions.length}`;
       questionsItem.choices.forEach((choicesItem) => {
-        questionChoices.innerHTML += `<li><input type="radio" id='${questionsItem.id}' name="${questionsItem.id}"> ${choicesItem}</li>`;
+        questionChoices.innerHTML += `<li><input type="radio" id='${questionsItem.id}' name="${questionsItem.id}" value="${choicesItem}"> ${choicesItem}</li>`;
         questionBody.appendChild(questionChoices);
+        const inputs = document.querySelectorAll("input");
+        inputs.forEach((input) => {
+          if (input.value === sessionStorage.getItem(questionsItem.id)) {
+            input.checked = true;
+          }
+          input.addEventListener("click", () => {
+            input.checked = true;
+            sessionStorage.setItem(questionsItem.id, input.value);
+          });
+        });
       });
     }
   });
+
   questionId > 1 && questionId <= questions.length
     ? (prevButton.style.display = "block")
     : (prevButton.style.display = "none");
@@ -68,9 +78,3 @@ function displayQuestion(id) {
       : (dot.style.backgroundColor = "rgb(160, 208, 246)");
   });
 }
-
-// const heart = document.querySelector(".result__item__img_heart");
-
-// heart.addEventListener("click", () => {
-//   heart.style.filter = "invert(90%)";
-// });

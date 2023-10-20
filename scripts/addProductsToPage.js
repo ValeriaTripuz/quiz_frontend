@@ -16,6 +16,14 @@ function addProductsToPage(data) {
           <span class="price">${item.price} <span>руб.</span></span>
         </div>
       </div>`;
+
+    const hearts = document.querySelectorAll(".result__item__img_heart");
+
+    hearts.forEach((heart) => {
+      heart.addEventListener("click", () => {
+        heart.style.filter = "invert(90%)";
+      });
+    });
   });
 }
 
