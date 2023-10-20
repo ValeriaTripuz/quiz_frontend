@@ -101,7 +101,7 @@
   .result__item__name {
     width: fit-content;
   }
-  .result__item__img_heart:active {
-    filter: invert(90%);
+  .result__item__img_heart:hover {
+    filter: invert(0%);
   }
 }
